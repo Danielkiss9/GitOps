@@ -3,4 +3,12 @@ kind: Kustomization
 resources:
   - "../../base"
 patches:
-  - "deployment.yaml"
+  - patch: |-
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: nginx-deployment
+      spec:
+        replicas: 6
+    target:
+      kind: Deployment

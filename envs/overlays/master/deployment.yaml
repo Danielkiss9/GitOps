@@ -1,4 +1,0 @@
-apiVersion: apps/v1
-kind: Deployment
-spec:
-  replicas: 12 # tells deployment to run 2 pods matching the template
